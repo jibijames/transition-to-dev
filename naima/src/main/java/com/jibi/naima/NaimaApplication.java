@@ -8,7 +8,7 @@ public class NaimaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NaimaApplication.class, args);
-		System.out.println("jibi naima");
+		System.out.println("Application running");
 	}
 
 }
