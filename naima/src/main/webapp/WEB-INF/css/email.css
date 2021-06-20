@@ -1,0 +1,52 @@
+.add-sms-credit-row{
+    margin-bottom: 10px;
+}
+
+.add-sms-credit-row .ea-label{
+    width: 75px;
+    padding-right: 10px;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+.ea-text-holder{
+    padding: 5px 0px;
+}
+
+.ea-input-wrapper,ea-input-holder,.ea-label{
+	display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+}
+
+.ea-input-wrapper{
+	align-items: flex-end;
+    flex: 1 1 auto;
+}
+.ea-input-holder{
+    border: 1px solid #ccc;
+    align-items: center;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: wrap;
+    max-height: 70px;
+    cursor: default;
+}
+.ea-input[type="text"], .ea-input[type="text"]:hover, .ea-input[type="text"]:focus{
+    height: 26px;
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    line-height: 26px;
+    padding: 0px 5px;
+    color: #000;
+}
+
+.add-sms-credit-row .ea-label{
+	flex: 0 0 auto;
+    width: 75px;
+    font-weight: bold;
+    padding-right: 10px;
+    align-items: flex-start;
+    padding-top: 5px;
+}
