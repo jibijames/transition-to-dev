@@ -8,7 +8,7 @@ public class TestClass1 {
 		Scanner s = new Scanner(System.in);
 //		String str = s.next();
 //        System.out.println("string is :"+str);
-		while(s.hasNext()){
+		if(s.hasNext()){
             String str = s.next();
             System.out.println("string is :"+str);
         }
