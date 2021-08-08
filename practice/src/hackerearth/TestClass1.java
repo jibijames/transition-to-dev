@@ -1,11 +1,15 @@
 package hackerearth;
 
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class TestClass1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		Boolean check=true;
 		
 		String inputString = "";		
 		String lastValue = "";
@@ -18,7 +22,9 @@ public class TestClass1 {
         int countRotation=0;
         
         // Scanner
-        Scanner s = new Scanner(System.in);
+        File file = new File("C:\\Users\\jjames\\Personal Files\\DevLearning\\test01.txt");
+		Scanner s = new Scanner(file);
+//        Scanner s = new Scanner(System.in);
                 
         if(s.hasNext()){
         	totalTestCases=Integer.parseInt(s.nextLine());
@@ -29,15 +35,19 @@ public class TestClass1 {
         String[] inputArray = {};
         String[] tempArray = {};
         
-        StringBuffer result = new StringBuffer();
+//        StringBuffer result = new StringBuffer();
+        StringBuilder result=new StringBuilder();
         
         while(s.hasNext()){
         	inputString=s.nextLine();
-        	tempArray=inputString.split(" ");
+        	tempArray=inputString.split(" ");        	
 
-        	countTestCase++;
-
-        	if(countTestCase%2==0) {
+        	if(check) {
+        		firstArray=tempArray;
+        		countTestCase++;
+        		check=false;
+        	}else{
+        		check=true;
         		inputArray=tempArray;
         		noOfElements = Integer.parseInt(firstArray[0]);
                 noOfRotations = Integer.parseInt(firstArray[1]);
@@ -49,17 +59,16 @@ public class TestClass1 {
 	                    	}
                     	inputArray[0]=lastValue;
                     }
-                    result.setLength(0);
+//                    result.setLength(0);
                     for(index=0; index<inputArray.length; index ++) {
                     	result.append(inputArray[index]+" ");
+//                    	System.out.print(inputArray[index]+" ");
                     }
                 	System.out.println(result.toString());
-            	if(countTestCase==(totalTestCases*2)) {
+            	if(countTestCase==totalTestCases) {
             		break;
             	}
 
-        	}else {
-        		firstArray=tempArray;
         	}
         	
         }
