@@ -24,7 +24,7 @@ public class TestClass2 {
 		String[] tempArray = {};
 		String[][] inputArray = {};
 		// Scanner
-		File file = new File("C:\\Users\\jjames\\Personal Files\\DevLearning\\f6fe6370b15c11ea.txt.clean.txt");
+		File file = new File("C:\\Users\\jjames\\Personal Files\\DevLearning\\test02.txt");
 		Scanner s = new Scanner(file);
 //        Scanner s = new Scanner(System.in);
                 
